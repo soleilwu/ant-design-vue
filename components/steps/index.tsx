@@ -155,10 +155,11 @@ const Steps = defineComponent({
 /* istanbul ignore next */
 export const Step = defineComponent({
   compatConfig: { MODE: 3 },
-  ...(VcStep as any),
+  ...VcStep,
   name: 'AStep',
   props: VcStepProps(),
 });
+
 export default Object.assign(Steps, {
   Step,
   install: (app: App) => {
